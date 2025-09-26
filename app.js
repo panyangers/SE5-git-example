@@ -40,7 +40,7 @@ app.post('/vote/:id', async (req, res) => {
     const card = await CardModel.findById(cardId);  // Find the card by its ID
 
     if (!card) {
-      return res.status(404).send('Card not found');
+      return res.status(404).send('Card could not be found');
     }
 
     // Update the votes based on the voteType
